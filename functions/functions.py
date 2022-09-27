@@ -40,8 +40,8 @@ def deleteJpeg(path) -> list:
 
 def deleteBrackets(path) -> list:
     # rename files removing the text in brackets using regex
-    # ex: [www.Crunchyroll.com] One Piece - 001 [1080p].mkv
-    #     One Piece - 001.mkv
+    # ex: [www.Crunchyr0ll.com] One Pi3ce - 001 [1080p].mkv
+    #     One Pi3ce - 001.mkv
     renamed = []
     for file in os.listdir(path):
         newFile = re.sub(r"\[.*?\]", "", file)
@@ -54,8 +54,8 @@ def deleteBrackets(path) -> list:
 
 def deleteParentheses(path) -> list:
     # rename files removing the text in parentheses using regex
-    # ex: One Piece - 001 (1080p).mkv
-    #     One Piece - 001.mkv
+    # ex: One Pi3ce - 001 (1080p).mkv
+    #     One Pi3ce - 001.mkv
     renamed = []
     for file in os.listdir(path):
         newFile = re.sub(r"\(.*?\)", "", file)

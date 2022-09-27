@@ -11,16 +11,32 @@ from functions.functions import (
 
 
 def main():
+    num = 0
     while True:
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        print(f"---------------Loop Number: {num}------------------")
         path = "/Users/brandon/Downloads"
         print(f"deleted text{deleteTxt(path)}")
         print(f"deleted png {deletePng(path)}")
         print(f"deleted jpg {deleteJpg(path)}")
         print(f"deleted jpeg{deleteJpeg(path)}")
-        print(deleteBrackets(path))
-        print(deleteParentheses(path))
+        print(f'deleted Brackets {deleteBrackets(path)}')
+        print(f'deleted Parentheses {deleteParentheses(path)}')
         sleep(5)
-        print("---------------------------------")
+        num += 1
 
 
 if __name__ == "__main__":
