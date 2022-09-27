@@ -11,34 +11,21 @@ from functions.functions import (
 
 
 def main():
-    num = 0
-    while True:
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        print(f"---------------Loop Number: {num}------------------")
-        path = "/Users/brandon/Downloads"
-        print(f"deleted text{deleteTxt(path)}")
-        print(f"deleted png {deletePng(path)}")
-        print(f"deleted jpg {deleteJpg(path)}")
-        print(f"deleted jpeg{deleteJpeg(path)}")
-        print(f'deleted Brackets {deleteBrackets(path)}')
-        print(f'deleted Parentheses {deleteParentheses(path)}')
-        sleep(5)
-        num += 1
+    path = input("Path: ")
+    images = input("Delete jpeg, jpg, png? (y/n): ")
+    txt = input("Delete txt's? (y/n): ")
+    bp = input("Delete brackets and parentheses? (y/n): ")
+    
+    if images.lower() == "y":
+        deleteJpeg(path)
+        deleteJpg(path)
+        deletePng(path)
+    if txt.lower() == "y":
+        deleteTxt(path)
+    if bp.lower() == "y":
+        deleteBrackets(path)
+        deleteParentheses(path)
 
 
 if __name__ == "__main__":
     main()
-
